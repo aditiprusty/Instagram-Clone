@@ -1,3 +1,3 @@
-# Instagram-Clone
-A Instagram clone Website opening page
-Click here to go to the website: https://vivekmohanta03.github.io/Instagram-Clone/
+# Instagram-Clone Website
+Click here to go to the website: 
+https://aditiprusty.github.io/Instagram-Clone/
