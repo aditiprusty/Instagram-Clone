@@ -1,3 +1,14 @@
+:root {
+  --gradient: linear-gradient(to right, #e2336b, #fcac46);
+  --background: #000;
+  --text: #fff;
+}
+/* :root {
+  --background: #000;
+  --text: #fff;
+  --highlight: #ff1ead;
+} */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Square+Peg&display=swap");
 * {
   font-family: "Poppins", sans-serif;
@@ -13,9 +24,6 @@ body {
   padding-top: 15px;
   padding-left: 15px;
 }
-:root {
-  --gradient: linear-gradient(to right, #e2336b, #fcac46);
-}
 
 .sidebar {
   position: fixed;
@@ -23,17 +31,23 @@ body {
   height: 100vh;
   background: #f8f8f8;
   z-index: 2;
+  transition: all 0.3s ease-in-out;
 }
 .main-home {
   position: absolute;
   width: calc(100% - 300px);
+  height: 100vh;
   top: 0;
   left: 300px;
   background: #fff;
   border-radius: 1rem 0 0 1rem;
   z-index: 1000;
+  transition: all 0.3s ease-in-out;
 }
-
+.main-home.dark {
+  background-color: #000;
+  color: #fff;
+}
 .logo img {
   width: 140px;
 }
@@ -189,6 +203,31 @@ body {
 .header-content .btn i {
   color: hsla(0, 0%, 100%, 0.6);
   margin-left: 10px;
+}
+
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: #ba2b8d;
+  border-radius: 50px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.toggle::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 50%;
+  left: 6px;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+}
+.toggle.active::before {
+  left: calc(100% - 20px - 6px);
 }
 
 .btn-text {
