@@ -3,6 +3,9 @@
   --background: #000;
   --text: #fff;
 }
+html{
+  scroll-behavior: smooth;
+}
 /* :root {
   --background: #000;
   --text: #fff;
@@ -21,8 +24,7 @@
 
 body {
   background: #f8f8f8;
-  padding-top: 15px;
-  padding-left: 15px;
+ padding:15px;
 }
 
 .sidebar {
@@ -36,7 +38,6 @@ body {
 .main-home {
   position: absolute;
   width: calc(100% - 300px);
-  height: 100vh;
   top: 0;
   left: 300px;
   background: #fff;
@@ -387,3 +388,100 @@ body {
   font-size: 14px;
   margin-left: 7px;
 }
+@media screen and (max-width: 992px) {
+  .sidebar {
+  width: 250px;
+  }
+  
+  .main-home {
+  width: calc(100% - 250px);
+  left: 250px;
+  }
+  }
+  
+  @media screen and (max-width: 768px) {
+  .sidebar {
+  width: 100%;
+  height: auto;
+  position: relative;
+  }
+  
+  .sidebar ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  }
+  
+  .sidebar ul li {
+  width: 50%;
+  }
+  
+  .sidebar ul li a {
+  width: 100%;
+  }
+  
+  .main-home {
+  width: 100%;
+  position: relative;
+  left: 0;
+  border-radius: 0;
+  }
+  }
+  
+  @media screen and (max-width: 576px) {
+  .search {
+  width: 100%;
+  margin-right: 1rem;
+  }
+  
+  .header-content .btn {
+  padding: 8px;
+  margin-left: 0.5rem;
+  }
+  
+  .header-content .btn i {
+  margin-left: 5px;
+  }
+  }
+  
+  @media screen and (max-width: 375px) {
+  .sidebar ul li {
+  width: 100%;
+  }
+  
+  .sidebar ul li a {
+  width: 100%;
+  }
+  
+  .name h1 {
+  font-size: 1rem;
+  }
+  
+  .menu a {
+  font-size: 0.938rem;
+  }
+  
+  .box h3 {
+  font-size: 0.938rem;
+  }
+  
+  .box span {
+  font-size: 0.813rem;
+  }
+  }
+  
+  @media screen and (max-width: 320px) {
+  .search input {
+  width: 70%;
+  }
+  
+  .header-content .btn {
+  padding: 5px;
+  margin-left: 0.5rem;
+  }
+  
+  .header-content .btn i {
+  font-size: 18px;
+  margin-left: 5px;
+  }
+  }
